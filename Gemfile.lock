@@ -223,7 +223,7 @@ DEPENDENCIES
   rails (= 4.0.0)
   rails_12factor
   rb-fsevent
-  rspec-rails
+  rspec-rails (~> 2.0)
   sass-rails (~> 4.0.0)
   slim-rails
   turbolinks

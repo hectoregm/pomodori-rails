@@ -17,20 +17,14 @@ gem 'unicorn'
 # Heroku
 gem 'rails_12factor', group: :production
 
-group :development do
+group :development, :test do
   gem 'powify'
+  gem 'rspec-rails', '~> 2.0'
   gem 'guard-bundler'
   gem 'guard-cucumber'
   gem 'guard-rails'
   gem 'guard-rspec'
   gem 'rb-fsevent', :require => false
-end
-
-group :development, :test do
-  gem 'rspec-rails'
-end
-
-group :test do
   gem 'capybara'
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
