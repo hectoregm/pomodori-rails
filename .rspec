@@ -1,4 +1,3 @@
 --color
---drb
 --format html --out coverage/rspec.html
 --format documentation
