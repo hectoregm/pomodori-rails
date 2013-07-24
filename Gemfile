@@ -26,7 +26,7 @@ group :development, :test do
   gem 'guard-rails'
   gem 'guard-rspec'
   gem 'rb-fsevent', :require => false
-  gem 'capybara'
+  gem 'poltergeist', '~> 1.3'
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
   gem 'machinist'
