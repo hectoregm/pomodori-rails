@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 1.2'
 
 gem 'bootstrap-sass', '~> 2.3.2'
 gem 'slim-rails'
+gem 'high_voltage'
 gem 'unicorn'
 
 gem 'rake'
