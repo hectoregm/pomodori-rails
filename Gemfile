@@ -21,7 +21,6 @@ group :development, :test do
   gem 'powify'
   gem 'rspec-rails', '~> 2.0'
   gem 'guard-bundler'
-  gem 'guard-spork'
   gem 'guard-cucumber'
   gem 'guard-rails'
   gem 'guard-rspec'
