@@ -1,3 +1,5 @@
+require 'coveralls'
+Coveralls.wear_merged!('rails')
 require 'cucumber/rails'
 require 'capybara/poltergeist' # Poltergeist integration
 
