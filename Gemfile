@@ -18,17 +18,22 @@ gem 'unicorn'
 gem 'rake'
 gem 'rails_12factor', group: :production
 
-group :development, :test do
+group :development do
   gem 'powify'
-  gem 'poltergeist', '~> 1.3'
-  gem 'rspec-rails', '~> 2.0'
-  gem 'cucumber-rails', :require => false
-  gem 'database_cleaner'
-  gem 'machinist'
+  gem 'rb-fsevent', :require => false
   gem 'guard-bundler'
   gem 'guard-rspec'
   gem 'guard-cucumber'
   gem 'guard-pow'
   gem 'guard-livereload'
-  gem 'rb-fsevent', :require => false
+end
+
+group :development, :test do
+  gem 'poltergeist', '~> 1.3'
+  gem 'rspec-rails', '~> 2.0'
+  gem 'cucumber-rails', :require => false
+  gem 'database_cleaner'
+  gem 'machinist'
+  gem "jasminerice", :git => 'https://github.com/bradphelan/jasminerice.git'
+  gem 'guard-jasmine'
 end
