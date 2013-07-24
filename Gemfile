@@ -14,7 +14,6 @@ gem 'bootstrap-sass', '~> 2.3.2'
 gem 'slim-rails'
 gem 'high_voltage'
 gem 'unicorn'
-gem 'coveralls', require: false
 
 gem 'rake'
 gem 'rails_12factor', group: :production
@@ -37,4 +36,5 @@ group :development, :test do
   gem 'machinist'
   gem "jasminerice", :git => 'https://github.com/bradphelan/jasminerice.git'
   gem 'guard-jasmine'
+  gem 'simplecov', :require => false
 end
