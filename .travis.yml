@@ -1,15 +1,19 @@
 language: ruby
 rvm:
-  - 2.0.0
-
+- 2.0.0
 script:
-  - RAILS_ENV=test bundle exec rake db:migrate --trace
-  - bundle exec rspec spec
-  - bundle exec cucumber features
-
+- RAILS_ENV=test bundle exec rake db:migrate --trace
+- bundle exec rspec spec
+- bundle exec cucumber features
 branches:
   only:
-    - master
-
+  - master
 before_script:
-  - psql -c 'create database pomodori_test;' -U postgres
+- psql -c 'create database pomodori_test;' -U postgres
+deploy:
+  provider: heroku
+  api_key:
+    secure: jvvlh4jXcsl0MGpqjfHvLxiXdComijvyDEHFOM2foh+z0jlBekrd5Ljf11MUFt76feVIrOrg1FbMAGFhqQA7RvifB+AO02SWLAkMZDmMISAwY+452XFW7Lb5ivgLIFqQUaNBuhuY2U6MKWiaG1QObizN3W8sjxDEa8+26gV1fPc=
+  app: young-mesa-5354
+  on:
+    repo: hectoregm/pomodori
