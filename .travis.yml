@@ -6,8 +6,8 @@ script:
 - bundle exec rspec spec
 - bundle exec cucumber features
 branches:
-  only:
-  - master
+  except:
+  - experimental
 before_script:
 - psql -c 'create database pomodori_test;' -U postgres
 deploy:
