@@ -1,0 +1,1 @@
+# Pomodori - A time management app inspired by the Pomodoro technique® [![Build Status](https://travis-ci.org/hectoregm/pomodori.png?branch=master)](https://travis-ci.org/hectoregm/pomodori) [![Dependency Status](https://gemnasium.com/hectoregm/pomodori.png)](https://gemnasium.com/hectoregm/pomodori)
