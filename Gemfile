@@ -20,14 +20,15 @@ gem 'rails_12factor', group: :production
 
 group :development, :test do
   gem 'powify'
-  gem 'rspec-rails', '~> 2.0'
-  gem 'guard-bundler'
-  gem 'guard-cucumber'
-  gem 'guard-rails'
-  gem 'guard-rspec'
-  gem 'rb-fsevent', :require => false
   gem 'poltergeist', '~> 1.3'
+  gem 'rspec-rails', '~> 2.0'
   gem 'cucumber-rails', :require => false
   gem 'database_cleaner'
   gem 'machinist'
+  gem 'guard-bundler'
+  gem 'guard-rspec'
+  gem 'guard-cucumber'
+  gem 'guard-pow'
+  gem 'guard-livereload'
+  gem 'rb-fsevent', :require => false
 end

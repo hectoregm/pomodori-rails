@@ -56,6 +56,9 @@ GEM
       nokogiri (>= 1.5.0)
     database_cleaner (1.0.1)
     diff-lcs (1.2.4)
+    em-websocket (0.5.0)
+      eventmachine (>= 0.12.9)
+      http_parser.rb (~> 0.5.3)
     erubis (2.7.0)
     eventmachine (1.0.3)
     execjs (1.4.0)
@@ -78,8 +81,12 @@ GEM
     guard-cucumber (1.4.0)
       cucumber (>= 1.2.0)
       guard (>= 1.1.0)
-    guard-rails (0.4.7)
-      guard (>= 0.2.2)
+    guard-livereload (1.4.0)
+      em-websocket (>= 0.5.0)
+      guard (>= 1.8.0)
+      multi_json (~> 1.7)
+    guard-pow (1.0.0)
+      guard (>= 1.1)
     guard-rspec (3.0.2)
       guard (>= 1.8)
       rspec (~> 2.13)
@@ -221,7 +228,8 @@ DEPENDENCIES
   database_cleaner
   guard-bundler
   guard-cucumber
-  guard-rails
+  guard-livereload
+  guard-pow
   guard-rspec
   high_voltage
   jbuilder (~> 1.2)
