@@ -6,7 +6,7 @@ development:
   username: postgres
   password:
 
-test:
+test: &test
   adapter: postgresql
   encoding: unicode
   database: pomodori_test
@@ -21,3 +21,6 @@ production:
   pool: 5
   username: pomodori
   password:
+
+cucumber:
+  <<: *test
