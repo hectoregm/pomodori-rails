@@ -1,7 +1,35 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+# -*- coding: utf-8 -*-
+Task.create({ name: "Defeat Balrog",
+              estimate: 4,
+              priority: 1,
+              status:"New",
+              today: true
+            })
+
+Task.create({ name: "Free King Théoden from Grima Wormtongue influence.",
+              estimate: 1,
+              priority: 2,
+              status:"New",
+              today: true
+            })
+
+Task.create({ name: "Defend Helm's Deep from Saruman orcs.",
+              estimate: 2,
+              priority: 3,
+              status: "New",
+              today: true
+            })
+
+Task.create({ name: "Brake Saruman staff and expel him from the White Council.",
+              estimate: 3,
+              priority: 4,
+              status: "New",
+              today: true
+            })
+
+Task.create({ name: "Prepare the defenses in Minas Tirith.",
+              estimate: 4,
+              priority: 5,
+              status: "New",
+              today: true
+            })
