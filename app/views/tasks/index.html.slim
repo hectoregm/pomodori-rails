@@ -2,7 +2,8 @@ section.tasks
   header
     h1 To Do Today
   = form_for @task do |f|
-    = f.text_field :name, required: true
+    = f.text_field :name, required: true, placeholder: 'e.g. Destroy One Ring'
+    = f.select(:estimate, (1..7).to_a)
     = f.submit 'Add'
   ul
     - @tasks.each do |task|
