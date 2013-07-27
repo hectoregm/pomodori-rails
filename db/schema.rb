@@ -11,9 +11,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 0) do
+ActiveRecord::Schema.define(version: 20130727214627) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "pomodori", force: true do |t|
+    t.integer  "task_id"
+    t.datetime "started_at"
+    t.datetime "finished_at"
+    t.integer  "length"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "pomodori", ["task_id"], name: "index_pomodori_on_task_id", using: :btree
+
+  create_table "tasks", force: true do |t|
+    t.string   "name",                       null: false
+    t.integer  "estimate",   default: 1
+    t.integer  "priority"
+    t.string   "status"
+    t.boolean  "today",      default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end

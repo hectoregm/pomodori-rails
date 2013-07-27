@@ -51,7 +51,7 @@ guard :jasmine do
   watch(%r{app/assets/javascripts/(.+?)\.(js\.coffee|js|coffee)(?:\.\w+)*$}) { |m| "spec/javascripts/#{ m[1] }_spec.#{ m[2] }" }
 end
 
-guard 'cucumber', :cli => '--format progress --format html --out=./coverage/cucumber.html --tags ~@wip' do
+guard 'cucumber', :cli => '--format pretty --format html --out=./coverage/cucumber.html --tags ~@wip' do
   watch(%r{^features/.+\.feature$})
   watch(%r{^features/support/.+$})          { 'features' }
   watch(%r{^features/step_definitions/(.+)_steps\.rb$}) { |m| Dir[File.join("**/#{m[1]}.feature")][0] || 'features' }
