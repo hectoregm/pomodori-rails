@@ -1,6 +1,9 @@
 section.tasks
   header
     h1 To Do Today
+  = form_for @task do |f|
+    = f.text_field :name, required: true
+    = f.submit 'Add'
   ul
     - @tasks.each do |task|
       li
