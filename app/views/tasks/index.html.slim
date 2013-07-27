@@ -5,3 +5,4 @@ section.tasks
     - @tasks.each do |task|
       li
         = task.name
+        span.estimate  #{task.pomodori.size} / #{task.estimate}

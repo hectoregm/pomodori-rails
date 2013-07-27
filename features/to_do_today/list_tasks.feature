@@ -7,3 +7,8 @@ Feature: List all user "today" tasks
     Given I am a user with tasks for today
     When I go to the today page
     Then I should see my tasks for today
+
+  Scenario: Show the pomodori estimate of each task
+    Given I am a user with tasks for today
+    When I go to the today page
+    Then I should see the estimates of my tasks
