@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
+#ruby-gemset=pomodori
 
 gem 'rails', '4.0.0'
 gem 'pg'
@@ -14,6 +15,7 @@ gem 'bootstrap-sass', '~> 2.3.2'
 gem 'slim-rails'
 gem 'high_voltage'
 gem 'unicorn'
+gem 'coveralls', require: false
 
 gem 'rake'
 gem 'rails_12factor', group: :production
