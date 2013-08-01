@@ -3,8 +3,8 @@ html(lang=I18n.locale)
   head
     meta charset="utf-8"
     title Pomodori
-    == stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
-    == javascript_include_tag "application", "data-turbolinks-track" => true
     == csrf_meta_tags
   body
     == yield
+    == stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
+    == javascript_include_tag "application", "data-turbolinks-track" => true
