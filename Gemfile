@@ -19,6 +19,7 @@ gem 'coveralls', require: false
 
 gem 'rake'
 gem 'rails_12factor', group: :production
+gem 'heroku-deflater', group: :production
 
 group :development do
   gem 'powify'
