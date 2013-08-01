@@ -7,4 +7,4 @@ html(lang=I18n.locale)
     == csrf_meta_tags
   body
     == yield
-    == javascript_include_tag "application", "data-turbolinks-track" => true
+    == javascript_include_tag "application", "data-turbolinks-track" => true, :defer => "true"
