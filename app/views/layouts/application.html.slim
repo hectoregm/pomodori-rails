@@ -5,6 +5,12 @@ html(lang=I18n.locale)
     title Pomodori
     == stylesheet_link_tag "application", media: "all", "data-turbolinks-track" => true
     == csrf_meta_tags
+    coffee:
+      window.q = []
+      window.$ = (f) ->
+        q.push(f)
+
   body
     == yield
     == javascript_include_tag "application", "data-turbolinks-track" => true, :defer => "true"
+    == yield :inline
