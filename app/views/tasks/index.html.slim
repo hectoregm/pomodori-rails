@@ -10,4 +10,5 @@ section.tasks
       li
         = task.name
         span.estimate  #{task.pomodori.size} / #{task.estimate}
+        = link_to 'Start', track_task_pomodori_path(task)
         = link_to 'Remove', task, data: {confirm: "Are you sure?" }, method: :delete

@@ -54,6 +54,14 @@ When(/^I remove the task "(.*?)"$/) do |task_name|
   page.click_on "Remove"
 end
 
-Then(/^I should not see task "(.*?)"$/) do |arg1|
-  expect(page).to_not have_content('Defeat Balrog')
+Then(/^I should not see task "(.*?)"$/) do |task_name|
+  expect(page).to_not have_content(task_name)
+end
+
+When(/^I start the task "(.*?)"$/) do |task_name|
+  page.find('li', text: task_name).click_on("Start")
+end
+
+Then(/^I should see a pomodoro page$/) do
+  expect(page).to have_content("Pomodoro Tracking")
 end
