@@ -4,5 +4,6 @@
 # spec/javascripts/*_spec.js
 # spec/javascripts/*_spec.js.erb
 #
+#=require ./global
 #=require application
 #=require_tree ./

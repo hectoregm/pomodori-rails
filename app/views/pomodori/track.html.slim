@@ -4,24 +4,28 @@ section.pomodoro
     .countdown
 
 - content_for :inline
+  javascript:
+    var end_timer = "#{(Time.now + 1.minutes).to_s(:timer)}";
+
+- content_for :inline
   coffee:
     $ -> 
       $('.countdown').jCountdown 
-        timeText:"2020/01/01 00:00:00"
-        timeZone:8
-        style:"flip"
-        color:"black"
-        width:0
-        textGroupSpace:15
-        textSpace:0
-        reflection:true
-        reflectionOpacity:10
-        reflectionBlur:0
-        dayTextNumber:4
-        displayDay:true
-        displayHour:true
-        displayMinute:true
-        displaySecond:true
-        displayLabel:true
+        timeText: end_timer
+        timeZone: -5
+        style: "metal"
+        color: "black"
+        width: 0
+        textGroupSpace: 15
+        textSpace: 0
+        reflection: false
+        reflectionOpacity: 10
+        reflectionBlur: 0
+        dayTextNumber: 4
+        displayDay: false
+        displayHour: false
+        displayMinute: true
+        displaySecond: true
+        displayLabel: true
         onFinish: ->
           alert("finish")
