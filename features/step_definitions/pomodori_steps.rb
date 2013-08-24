@@ -65,3 +65,11 @@ end
 Then(/^I should see a pomodoro page$/) do
   expect(page).to have_content("Pomodoro Tracking")
 end
+
+When(/^I start to work on the "(.*?)" task$/) do |task_name|
+  visit track_task_pomodori_path(Task.where(name: task_name).first)
+end
+
+Then(/^I should see a countdown timer$/) do
+  expect(page).to have_content("Pomodoro Tracking")
+end

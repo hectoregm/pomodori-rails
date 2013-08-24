@@ -34,6 +34,11 @@ GEM
       tzinfo (~> 0.3.37)
     arel (4.0.0)
     atomic (1.1.13)
+    backbone-on-rails (1.0.0.1)
+      eco
+      ejs
+      jquery-rails
+      rails (>= 3.1)
     bootstrap-sass (2.3.2.1)
       sass (~> 3.2)
     builder (3.1.4)
@@ -73,6 +78,12 @@ GEM
       rails (>= 3.0.0)
     database_cleaner (1.1.1)
     diff-lcs (1.2.4)
+    eco (1.0.0)
+      coffee-script
+      eco-source
+      execjs
+    eco-source (1.1.0.rc.1)
+    ejs (1.1.1)
     em-websocket (0.5.0)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0.5.3)
@@ -252,6 +263,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  backbone-on-rails
   bootstrap-sass (~> 2.3.2)
   coffee-rails (~> 4.0.0)
   coveralls
