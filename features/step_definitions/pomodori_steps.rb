@@ -2,6 +2,8 @@ Given(/^I am an user$/) do
 end
 
 Given(/^I am an user with tasks for today$/) do
+  Task.create(name: "Defend Helm's Deep from Saruman orcs", today: true, estimate: 2)
+  Task.create(name: "Prepare the defenses in Minas Tirith", today: true, estimate: 4)
 end
 
 When(/^I go to the today page$/) do
@@ -44,3 +46,14 @@ Then(/^the add task should be reset$/) do
   expect(page.find_field('task_estimate').value).to eq "1"
 end
 
+Given(/^I have a task to "(.*?)"$/) do |task_name|
+  Task.create(name: task_name, today: true)
+end
+
+When(/^I remove the task "(.*?)"$/) do |task_name|
+  page.click_on "Remove"
+end
+
+Then(/^I should not see task "(.*?)"$/) do |arg1|
+  expect(page).to_not have_content('Defeat Balrog')
+end
