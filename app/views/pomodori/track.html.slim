@@ -5,14 +5,14 @@ section.pomodoro
 
 - content_for :inline
   javascript:
-    var end_timer = "#{(Time.now + 25.minutes).to_s(:timer)}";
+    var end_timer = "#{(Time.now.utc + 25.minutes).to_s(:timer)}";
 
 - content_for :inline
   coffee:
     $ -> 
       $('.countdown').jCountdown 
         timeText: end_timer
-        timeZone: -5
+        timeZone: 0
         style: "metal"
         color: "black"
         width: 0
