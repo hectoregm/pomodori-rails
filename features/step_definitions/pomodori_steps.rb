@@ -63,7 +63,7 @@ When(/^I start the task "(.*?)"$/) do |task_name|
 end
 
 Then(/^I should see a pomodoro page$/) do
-  expect(page).to have_content("Pomodoro Tracking")
+  expect(page).to have_selector('.countdown')
 end
 
 When(/^I start to work on the "(.*?)" task$/) do |task_name|
@@ -71,5 +71,9 @@ When(/^I start to work on the "(.*?)" task$/) do |task_name|
 end
 
 Then(/^I should see a countdown timer$/) do
-  expect(page).to have_content("Pomodoro Tracking")
+  expect(page).to have_selector('.countdown')
+end
+
+Then(/^I should see "(.*?)" as the title$/) do |task_name|
+  expect(page).to have_content(task_name)
 end
